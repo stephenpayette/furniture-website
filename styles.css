@@ -1,8 +1,49 @@
-#hero-section{
-    background-image: url("img/hero.jpg");
-
+body{
+margin: 0%;
+text-align: center;
 }
 
-.main-heading{
+#hero-section{
+    height: 100vh;
+    background-image: url("img/hero.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+#wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.slogan{
+    color: white;
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+    margin: 0%;
+}
+
+.slogan2{
+     color: white;
+     font-size: 2em;
+     font-weight: 100;
+     text-align: center;
+     margin: 0%;
+}
+
+#about-furniture{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#iten-icons{
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sofa{
     
 }
