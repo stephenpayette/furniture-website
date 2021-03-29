@@ -13,11 +13,13 @@ text-align: center;
     display: flex;
     justify-content: center; 
     flex-direction: column;
+    position: relative;
 }
 
 #logo{
-    display: flex;
-    justify-content: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
     padding-left: 20px;
     padding-top: 20px;
 }
@@ -57,41 +59,40 @@ flex-direction: column;
     padding-bottom: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .icon{
     width: 5em;
 }
 
-#sofa{
+.h5{
     color: white;
     text-align: left;
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    font-size: 1em;
+}
+
+#sofa{
+    display: flex;
     flex-direction: row;
 }
 
-
-
 #table{
-    color: white;
+    display: flex;
+    flex-direction: row;
 }
-
 
 #chair{
-    color: white;
+    display: flex;
+    flex-direction: row;
 }
-
 
 #mug{
-    color: white;
-}
-
-
-
-#what-heading{
-    font-size: 1.17em;
-    margin: 1em;
-    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
 }
 
 .product-images{
@@ -101,9 +102,15 @@ flex-direction: column;
     padding-bottom: 50px;
 }
 
+.what-heading{
+    font-size: 1.17em;
+    padding: 1em;
+    padding-top: 2em;
+    margin: 0%;
+}
+
 .grid-container{
     display: grid;
-    height: 100vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 1em;
@@ -112,6 +119,7 @@ flex-direction: column;
 #div1{
     background: url("img/mug1.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
     grid-column-start: 1;
     grid-column-end: 2;
 }
@@ -119,6 +127,7 @@ flex-direction: column;
 #div2{
     background: url("img/table1.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -128,6 +137,7 @@ flex-direction: column;
 #div3{
     background: url("img/mug3.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
     grid-column-start: 3;
     grid-column-end: 4;
 }
@@ -135,6 +145,7 @@ flex-direction: column;
 #div4{
     background: url("img/mug2.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -142,8 +153,9 @@ flex-direction: column;
 }
 
 #div5{
-    background: url(img/chair3.jpg);
+    background: url("img/chair3.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 2;
@@ -151,8 +163,9 @@ flex-direction: column;
 }
 
 #div6{
-    background: url(img/chair2.jpg);
+    background: url("img/chair2.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
@@ -171,10 +184,128 @@ flex-direction: column;
 }
 
 #div8{
-    background: url(img/sofa.jpg);
+    background: url("img/sofa.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 5;
+}
+
+#quote{
+    background-color: black;
+    color: white;
+    font-style: italic;
+    font-size: 22px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#blogs{
+    background-color: lightgrey;
+}
+
+#blog-row{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 175px;
+}
+
+#living-top{
+    background-image: url("img/living.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 175px;
+    position: relative;
+}
+
+#living-tag{
+    background-color: black;
+    color: white;
+    max-width: 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    bottom: 10px;
+    left: 10px;
+    position: absolute;   
+}
+
+
+#living-bottom{
+    background-color: white;
+    color: black;
+    text-align: left;
+    padding: 15px;
+}
+
+.h4{
+    background-color: white;
+    margin: 0%;
+}
+
+
+#dinning-top{
+    background-image: url("img/dining.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 175px;
+    position: relative;
+}
+
+#dinning-tag{
+    background-color: black;
+    color: white;
+    max-width: 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+#dinning-bottom{
+    background-color: white;
+    color: black;
+    text-align: left;
+    padding: 15px;
+}
+
+.blog-block{
+    width: 30%;
+}
+
+#lounging-top{
+    background-image: url("img/lounging.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 175px;
+    position: relative;
+}
+
+#lounging-tag{
+    background-color: black;
+    color: white;
+    max-width: 60px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: 10px;
+    bottom: 10px;
+    position: absolute;
+}
+
+#lounging-bottom{
+    background-color: white;
+    color: black;
+    text-align: left;
+    padding: 15px;
 }
