@@ -60,11 +60,15 @@ flex-direction: column;
     padding-bottom: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+}
+
+.icons-row{
+    display: flex;
+    justify-content: space-between;
 }
 
 .icon{
-    width: 5em;
+    width: 3.5em;
 }
 
 .h5{
@@ -76,36 +80,33 @@ flex-direction: column;
     font-size: 1em;
 }
 
-#sofa{
+.sofa{
     display: flex;
     flex-direction: row;
 }
 
-#table{
+.table{
     display: flex;
     flex-direction: row;
 }
 
-#chair{
+.chair{
     display: flex;
     flex-direction: row;
 }
 
-#mug{
+.mug{
     display: flex;
     flex-direction: row;
 }
 
 .product-images{
     background-color: white;
-    margin-right: 50px;
-    margin-left: 50px;
     padding-bottom: 50px;
 }
 
 .h6{
     font-size: 1.17em;
-    padding: 1em;
     padding-top: 2em;
     margin: 0%;
 }
@@ -207,8 +208,8 @@ flex-direction: column;
     color: white;
     font-style: italic;
     font-size: 22px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 #blogs{
@@ -218,7 +219,8 @@ flex-direction: column;
 #blog-row{
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 175px;
+    padding-bottom: 75px;
+    padding-top: 25px;
 }
 
 #living-top{
@@ -321,48 +323,58 @@ flex-direction: column;
 
 #contact{
     display: flex;
+    background-color: lightgrey;
+    justify-content: space-between;
+    padding-bottom: 50px;
 }
 
 #contact-info{
     max-width: 40%;
     text-align: left;
     padding: 15px;
-    color: dimgray;
+    color:black;
 }
 
 #info{
 }
 
 #form-wrapper{
-    max-width: 60%;
     padding: 15px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+}
+
+#name.email{
     display: flex;
 }
 
 #name-input{
     margin-top: 15px;
-    width: 46.5%;
+    width: 200px;
     height: 25px;
     border: none;
 }
 
 #email-input{
     margin-top: 15px;
-    width: 46.5%;
+    width: 200px;
     height: 25px;
     border: none;
 }
 
 #title-input{
     margin-top: 15px;
-    width: 95%;
+    width: 100%;
     height: 25px;
     border: none;
 }
 
 #comment{
     margin-top: 15px;
-    width: 95%;
+    width: 100%;
     height: 100px;
     border: none;
 }
@@ -370,20 +382,20 @@ flex-direction: column;
 #form-button{
     background-color: black;
     color: white;
+    width: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 15px;
     padding-left: 15px;
     margin-top: 15px;
-    border: none;
-    align-items: flex-start;
+    border: none;  
 }
 
 #footer{
     background-color: black;
     color: white;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     padding-left: 20px;
     text-align: left;
 }
@@ -394,9 +406,70 @@ flex-direction: column;
 
 .footer-icon{
     width: 1em;
+    padding-right: 5px;
 }
 
-#linkedin-icon{
-    width: 1em;
-    background-color: white;
+.blackl{
+    text-align: left;
+    color: black;
+    font-size: 1.5em;
+    padding-top: 0%;
+}
+
+.container{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gray{
+    background-color: lightgray;
+}
+
+@media only screen and (max-width: 750px){
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1em;
+    height: 1000px;
+}
+
+#div8{
+    background: url("img/sofa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+#div3{
+    background: url("img/mug3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+}
+
+@media only screen and (min-width: 751px){
+    .icons-row-big{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 430px){
+.icons-row{
+    flex-direction: column;
+    align-items: center;
+}
 }
