@@ -62,10 +62,6 @@ flex-direction: column;
     align-items: center;
 }
 
-.icons-row{
-    display: flex;
-    justify-content: space-between;
-}
 
 .icon{
     width: 3.5em;
@@ -335,9 +331,6 @@ flex-direction: column;
     color:black;
 }
 
-#info{
-}
-
 #form-wrapper{
     padding: 15px;
 }
@@ -349,32 +342,33 @@ flex-direction: column;
 
 #name.email{
     display: flex;
+    justify-content: space-evenly;
 }
 
 #name-input{
     margin-top: 15px;
-    width: 200px;
+    width: 48%;
     height: 25px;
     border: none;
 }
 
 #email-input{
     margin-top: 15px;
-    width: 200px;
+    width: 48%;
     height: 25px;
     border: none;
 }
 
 #title-input{
     margin-top: 15px;
-    width: 100%;
+    width: 99%;
     height: 25px;
     border: none;
 }
 
 #comment{
     margin-top: 15px;
-    width: 100%;
+    width: 99%;
     height: 100px;
     border: none;
 }
@@ -428,6 +422,12 @@ flex-direction: column;
 
 @media only screen and (max-width: 750px){
 
+.icons-row-big{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
 .grid-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -461,15 +461,18 @@ flex-direction: column;
 
 @media only screen and (min-width: 751px){
     .icons-row-big{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 4em;
     }
 }
 
+
+
 @media only screen and (max-width: 430px){
-.icons-row{
-    flex-direction: column;
-    align-items: center;
-}
+    .icons-row-big{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
 }
